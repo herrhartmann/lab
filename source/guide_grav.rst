@@ -112,6 +112,16 @@ Tuning
 
 Grav turns on caching out of the box to improve the performance of your site. It will automatically use the best cache driver available. You can find more information in the Grav Documentation under `Performance & Caching`_.
 
+Backups 
+======
+If you don't need the backups necessarily, or you do manual backups anyway, switch off the backups in the GravCMS scheduler, otherwise your Uberspace will fill up quickly. 
+
+If you work with the command line this should do the job:
+
+```
+bin/grav backup
+```
+
 Updates
 =======
 
