@@ -169,6 +169,8 @@ In order for this to work, a backup must exist in ``~/tmp/wiki.bak`` which is au
 
 .. warning:: As ``~/tmp/`` is **not persistent**, the rollback can only be used immediately after a failed update, not after a long period of time.
 
+Create ~/bin/wiki-update with the following content:
+
 .. code-block:: bash
  :emphasize-lines: 4
 
@@ -229,7 +231,17 @@ In order for this to work, a backup must exist in ``~/tmp/wiki.bak`` which is au
  else
   echo "Wiki.js $PACKAGE_VERSION_OLD is already up-to-date, no update needed."
  fi
+ 
+Make the script executable:
 
+[isabell@stardust ~]$ chmod +x ~/bin/wiki-update
+[isabell@stardust ~]$
+
+Then you can run the script whenever you need it to perform the update.
+
+[isabell@stardust ~]$ wiki-update
+[...]
+[isabell@stardust ~]$
 
 .. _Wiki.js: https://wiki.js.org
 .. _feed: https://github.com/Requarks/wiki/releases/
